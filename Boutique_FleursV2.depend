@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1630813200 source:c:\users\benjamin\desktop\c++\boutique_fleursv2\fleurs.cpp
+	<iostream>
+	"fleurs.h"
+	<string>
+
+1630813570 c:\users\benjamin\desktop\c++\boutique_fleursv2\fleurs.h
+	<string>
+	<iostream>
+	<stdlib.h>
+
+1630813259 source:c:\users\benjamin\desktop\c++\boutique_fleursv2\users.cpp
+	<iostream>
+	"Users.h"
+	<string>
+
+1630813312 c:\users\benjamin\desktop\c++\boutique_fleursv2\users.h
+	<string>
+	<iostream>
+	<stdlib.h>
+
+1630815798 source:c:\users\benjamin\desktop\c++\boutique_fleursv2\main.cpp
+	<iostream>
+	<string>
+	"Users.h"
+	"fleurs.h"
+	<stdlib.h>
+
