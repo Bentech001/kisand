@@ -11,6 +11,7 @@ using namespace std;
 int lignesf =10;
 int lignes =2;
 User list_admin[N];
+User *utilisateur1;
 Fleurs listfleurs[M];
 Fleurs *listfleurs_pointeur = listfleurs;
 
@@ -41,33 +42,40 @@ double qt1=0;
         }
 }
 void achat_fleur(){
-system("cls");                         //le  password du client pour acceder a son compte
-int nmr=0;
-int nombre =0;
-cout<<"\n\n VEUILLEZ SAISIR L'IDENTIFICATEUR DU TYPE DE LA FLEUR\n\n";
-cin>>nmr;
+    system("cls");                         //le  password du client pour acceder a son compte
+    int nmr=0;
+    int nombre =0;
+    cout<<"=================================================================="<<endl;
+    cout<<"===   VEUILLEZ SAISIR L'IDENTIFICATEUR DU TYPE DE LA FLEUR ======="<<endl;
+    cout<<"=================================================================="<<endl;
+    cout<<"ID:       ";
+    cin>>nmr;
+    cout<<"=================================================================="<<endl;
 
-for(int i=0;i<lignesf+1;i++){
+        for(int i=0;i<lignesf+1;i++){
 
-    if(listfleurs[i].id==nmr){
-    cout<<"\n\n    VEUILLEZ ENTRER LE NOMBRE SVP\n\n";
-        cin>>nombre;
-        if(nombre <= listfleurs[i].qte){
-           listfleurs_pointeur[i].qte =(listfleurs[i].qte - nombre);
-        cout<<"\n\n Achat effectue avec succes, ce type de fleurs a maintenant :"<<listfleurs[i].qte<<" pieces\n\n\n";
-        main();
-        }else{
-            system("cls");
-            cout<<"\n\n\n Cette quantite est superieure à celle qui existe \n\n\n";
-            achat_fleur();
-        }
-    break;
-}else if(lignesf==i){
-            cout<<"          CET TYPE DE FLEUR N'EXISTE PAS OU MAUVAIS ID \n";
-            main();
+            if(listfleurs[i].id==nmr){
+            cout<<"==========================================="<<endl;
+            cout<<"==    VEUILLEZ ENTRER LE NOMBRE SVP      =="<<endl;
+            cout<<"==========================================="<<endl;
+            cout<<"Nombre: ";
+                cin>>nombre;
+                if(nombre <= listfleurs[i].qte){
+                   listfleurs_pointeur[i].qte =(listfleurs[i].qte - nombre);
+                cout<<" Achat effectue avec succes, ce type de fleurs a maintenant :"<<listfleurs[i].qte<<" pieces\n\n\n";
+                main();
+                }else{
+                    system("cls");
+                    cout<<"\n\n\n Cette quantite est superieure à celle qui existe \n\n\n";
+                    achat_fleur();
+                }
             break;
-            }
-}
+        }else if(lignesf==i){
+                    cout<<"          CET TYPE DE FLEUR N'EXISTE PAS OU MAUVAIS ID \n";
+                    main();
+                    break;
+                    }
+        }
 
 }
 void affichage_fleurs(){               // fonction de l'affichage de toutes les fleurs de la boutique
@@ -167,16 +175,17 @@ cin>>choix;
         }
      */
 }
- void login_admin(){
+void login_admin(){
 system("cls");                         //le  password du client pour acceder a son compte
 int mpw=0;
 char nom1;
 
-    cout<<" VEUILLEZ SAISIR VOTRE NOM\n\n";
-    cin>>nom1;
-
-    cout<<" VEUILLEZ SAISIR VOTRE MOT DE PASSE\n\n";
-    cin>>mpw;
+            cout<<" ============================================================="<<endl;
+            cout<<" ==============        CONNEXION                =============="<<endl;
+            cout<<" ============================================================="<<endl;
+            cout<<" ENTRER VOTRE MOT DE PASSE       : "<<endl;
+            cin >> mpw;
+            cout<<" ============================================================="<<endl;
 
     for(int i=0;i<lignes+1;i++){
 
